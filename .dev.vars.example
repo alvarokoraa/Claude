@@ -1,0 +1,4 @@
+# Copia este archivo como .dev.vars para probar en local con `npx wrangler pages dev site`.
+# .dev.vars está en .gitignore: nunca lo subas.
+LEAD_WEBHOOK_URL=https://tu-webhook-aqui
+ALLOWED_ORIGINS=https://www.gestoriadelahorro.es,https://gestoriadelahorro.es

@@ -1,0 +1,19 @@
+# Secretos: nunca se suben al repositorio
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+
+# Dependencias y builds
+node_modules/
+.wrangler/
+dist/
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

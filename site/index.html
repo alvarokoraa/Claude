@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestoría del Ahorro | Paga menos en tu factura de la luz</title>
+  <meta name="description" content="Revisamos tu factura de la luz gratis: potencia, tarifa y servicios que no usas. Déjanos tu teléfono y te llamamos con una propuesta para pagar menos.">
+  <meta name="theme-color" content="#0E3B2C">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- COMPLETAR: sustituye https://www.gestoriadelahorro.es por el dominio real -->
+  <link rel="canonical" href="https://www.gestoriadelahorro.es/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Gestoría del Ahorro">
+  <meta property="og:title" content="Paga menos en tu factura de la luz">
+  <meta property="og:description" content="Revisamos tu factura gratis y te llamamos con una propuesta para pagar menos.">
+  <meta property="og:url" content="https://www.gestoriadelahorro.es/">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/publicsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Gestoría del Ahorro",
+    "description": "Asesoría para reducir la factura de la luz de hogares y empresas.",
+    "url": "https://www.gestoriadelahorro.es/",
+    "areaServed": "ES",
+    "knowsLanguage": "es"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="Gestoría del Ahorro, inicio">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C8 8 5 14 5 19a11 11 0 0 0 22 0c0-5-3-11-11-17Z" fill="currentColor"/><path d="M17.5 10 12 19h4l-1.5 7L20 17h-4l1.5-7Z" fill="#fff"/></svg>
+        <span>Gestoría <b>del Ahorro</b></span>
+      </a>
+      <nav class="header-nav" aria-label="Principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn btn-small" href="#contacto">Revisar mi factura</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Tu factura de la luz tiene partes que <span class="nowrap">no deberías</span> estar pagando.</h1>
+          <p class="lead">Revisamos tu potencia contratada, tu tarifa y los servicios que te cobran sin que los uses. Tú nos dejas tu teléfono; nosotros hacemos el estudio y te llamamos con una propuesta concreta.</p>
+          <ul class="assurances">
+            <li>Estudio gratuito y sin compromiso</li>
+            <li>Sin cortes de suministro al cambiar</li>
+            <li>Hogares, autónomos y empresas</li>
+          </ul>
+          <a class="btn btn-large" href="#contacto">Quiero pagar menos</a>
+        </div>
+
+        <figure class="bill" aria-labelledby="bill-caption">
+          <div class="bill-paper">
+            <div class="bill-head">
+              <span class="bill-title">Tu factura mensual</span>
+              <span class="bill-sub">Mueve la barra hasta lo que pagas</span>
+            </div>
+
+            <label class="bill-slider" for="importe">
+              <span class="visually-hidden">Importe mensual de tu factura en euros</span>
+              <output class="bill-amount" id="importe-out" for="importe">85 €</output>
+              <input id="importe" type="range" min="30" max="400" step="5" value="85" aria-describedby="bill-caption">
+            </label>
+
+            <dl class="bill-lines">
+              <div class="line is-flag"><dt>Término de potencia <em>Revisable</em></dt><dd data-part="potencia">—</dd></div>
+              <div class="line is-flag"><dt>Energía consumida <em>Revisable</em></dt><dd data-part="energia">—</dd></div>
+              <div class="line is-flag"><dt>Servicios adicionales <em>Revisable</em></dt><dd data-part="servicios">—</dd></div>
+              <div class="line"><dt>Alquiler del contador</dt><dd data-part="contador">—</dd></div>
+              <div class="line"><dt>Impuestos</dt><dd data-part="impuestos">—</dd></div>
+            </dl>
+
+            <div class="bill-saving" aria-live="polite">
+              <span>Ahorro que solemos encontrar</span>
+              <strong id="ahorro-out">—</strong>
+            </div>
+          </div>
+          <figcaption id="bill-caption" class="bill-note">Desglose y ahorro orientativos. Tu ahorro real lo calculamos con tu factura.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- QUÉ REVISAMOS -->
+    <section class="section review" aria-labelledby="review-title">
+      <div class="wrap review-grid">
+        <div>
+          <h2 id="review-title">Lo que revisamos en tu factura</h2>
+          <p class="section-lead">La mayoría de facturas caras no lo son por consumir mucho, sino por estar mal ajustadas. Estos son los puntos donde más dinero se escapa.</p>
+        </div>
+        <dl class="checklist">
+          <div>
+            <dt>Potencia contratada</dt>
+            <dd>Si tienes más potencia de la que usas, la pagas todos los días aunque no la gastes. La ajustamos a tu consumo real.</dd>
+          </div>
+          <div>
+            <dt>Precio del kWh y tipo de tarifa</dt>
+            <dd>Comparamos tu precio con las ofertas actuales y vemos si te conviene precio fijo, por tramos horarios o indexado.</dd>
+          </div>
+          <div>
+            <dt>Servicios que no pediste</dt>
+            <dd>Mantenimientos, seguros o asistencias que se suman cada mes. Te decimos cuáles puedes quitar.</dd>
+          </div>
+          <div>
+            <dt>Energía reactiva y excesos de potencia</dt>
+            <dd>En negocios y empresas, penalizaciones que se pueden evitar con la configuración adecuada.</dd>
+          </div>
+          <div>
+            <dt>Bono social</dt>
+            <dd>Comprobamos si cumples los requisitos para el descuento regulado y te ayudamos a pedirlo.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section steps-section" id="como-funciona" aria-labelledby="steps-title">
+      <div class="wrap">
+        <h2 id="steps-title">Cómo funciona</h2>
+        <ol class="steps">
+          <li>
+            <h3>Nos dejas tu teléfono</h3>
+            <p>Un formulario de un minuto. No te pedimos datos bancarios ni tu factura todavía.</p>
+          </li>
+          <li>
+            <h3>Estudiamos tu factura</h3>
+            <p>Te llamamos, nos la envías por WhatsApp o email y la analizamos línea a línea.</p>
+          </li>
+          <li>
+            <h3>Te proponemos el cambio</h3>
+            <p>Te decimos cuánto ahorras y por qué. Si aceptas, hacemos todo el papeleo por ti.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2 id="contact-title">Te llamamos y revisamos tu factura</h2>
+          <p>Déjanos tu nombre y teléfono. Un asesor te llama en horario laboral, normalmente en menos de 24 horas.</p>
+          <p class="contact-small">Solo usamos tus datos para contactarte sobre tu factura. No los cedemos ni te añadimos a listas de publicidad.</p>
+        </div>
+
+        <form class="lead-form" id="lead-form" action="/api/lead" method="post" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="given-name" required maxlength="80">
+            <p class="field-error" id="nombre-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="600 000 000">
+            <p class="field-error" id="telefono-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="optional">(opcional)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="120">
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+
+          <fieldset class="field field-choice">
+            <legend>La factura es de</legend>
+            <div class="choices">
+              <label><input type="radio" name="tipo" value="hogar" checked> Mi casa</label>
+              <label><input type="radio" name="tipo" value="negocio"> Mi negocio</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="factura">¿Cuánto pagas al mes? <span class="optional">(aproximado)</span></label>
+            <select id="factura" name="factura">
+              <option value="">Prefiero no decirlo</option>
+              <option value="menos-50">Menos de 50 €</option>
+              <option value="50-100">Entre 50 y 100 €</option>
+              <option value="100-200">Entre 100 y 200 €</option>
+              <option value="200-500">Entre 200 y 500 €</option>
+              <option value="mas-500">Más de 500 €</option>
+            </select>
+          </div>
+
+          <!-- Campo trampa anti-spam: invisible para personas -->
+          <div class="hp" aria-hidden="true">
+            <label for="empresa_web">No rellenar</label>
+            <input id="empresa_web" name="empresa_web" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="ts" id="ts" value="">
+
+          <div class="field field-consent">
+            <label class="consent">
+              <input type="checkbox" name="consentimiento" id="consentimiento" value="si" required>
+              <span>He leído la <a href="/privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y acepto que me contactéis para estudiar mi factura.</span>
+            </label>
+            <p class="field-error" id="consentimiento-error" hidden></p>
+          </div>
+
+          <button class="btn btn-large btn-block" type="submit">Quiero que me llaméis</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="section faq" id="preguntas" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <h2 id="faq-title">Preguntas frecuentes</h2>
+        <div class="faq-list">
+          <details>
+            <summary>¿Cuánto cuesta el estudio?</summary>
+            <p>Nada. Revisamos tu factura y te damos una propuesta sin compromiso. Si no te convence, no cambias nada.</p>
+          </details>
+          <details>
+            <summary>¿Me quedaré sin luz al cambiar de compañía?</summary>
+            <p>No. El cambio de comercializadora es un trámite administrativo: la instalación, el contador y el suministro siguen siendo los mismos.</p>
+          </details>
+          <details>
+            <summary>¿Qué necesito para el estudio?</summary>
+            <p>Una factura reciente, en PDF o una foto. Si tienes varias, mejor, porque vemos cómo cambia tu consumo a lo largo del año.</p>
+          </details>
+          <details>
+            <summary>¿Trabajáis con negocios y empresas?</summary>
+            <p>Sí. En negocios revisamos también excesos de potencia y energía reactiva, que suelen ser donde más se puede ahorrar.</p>
+          </details>
+          <details>
+            <summary>¿Tengo permanencia si cambio?</summary>
+            <p>Te lo decimos antes de cambiar. Priorizamos ofertas sin permanencia y, si alguna la tiene, te explicamos las condiciones por escrito.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-row">
+        <p>Una llamada de diez minutos y sabrás cuánto puedes dejar de pagar.</p>
+        <a class="btn btn-light" href="#contacto">Revisar mi factura</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p><b>Gestoría del Ahorro</b><br>
+        <!-- COMPLETAR: razón social, CIF y dirección (obligatorio según la LSSI) -->
+        Razón social y CIF: [COMPLETAR]</p>
+      <nav aria-label="Legal">
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Política de privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="mobile-cta btn" href="#contacto">Revisar mi factura gratis</a>
+</body>
+</html>
